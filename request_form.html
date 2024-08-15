@@ -140,43 +140,47 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
   <script>
-    document.getElementById('requestForm').addEventListener('submit', function(event) {
-      event.preventDefault();
+  document.getElementById('requestForm').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-      const formData = {
-        name: document.getElementById('name').value,
-        projectTitle: document.getElementById('projectTitle').value,
-        areaOfInterest: document.getElementById('areaOfInterest').value,
-        institution: document.getElementById('institution').value,
-        mobile: document.getElementById('mobile').value,
-        email: document.getElementById('email').value,
-        datasetRequirements: document.getElementById('datasetRequirements').value,
-        purposeOfUse: document.getElementById('purposeOfUse').value,
-      };
+    const formData = {
+      name: document.getElementById('name').value,
+      projectTitle: document.getElementById('projectTitle').value,
+      areaOfInterest: document.getElementById('areaOfInterest').value,
+      institution: document.getElementById('institution').value,
+      mobile: document.getElementById('mobile').value,
+      email: document.getElementById('email').value,
+      datasetRequirements: document.getElementById('datasetRequirements').value,
+      purposeOfUse: document.getElementById('purposeOfUse').value,
+    };
 
-      const emailContent = `
-        Name: ${formData.name}\n
-        Project Title: ${formData.projectTitle}\n
-        Area of Interest: ${formData.areaOfInterest}\n
-        Institution: ${formData.institution}\n
-        Mobile Number: ${formData.mobile}\n
-        Email ID: ${formData.email}\n
-        Dataset Requirements: ${formData.datasetRequirements}\n
-        Purpose of Use: ${formData.purposeOfUse}
-      `;
+    const emailContent = `
+      Name: ${formData.name}\n
+      Project Title: ${formData.projectTitle}\n
+      Area of Interest: ${formData.areaOfInterest}\n
+      Institution: ${formData.institution}\n
+      Mobile Number: ${formData.mobile}\n
+      Email ID: ${formData.email}\n
+      Dataset Requirements: ${formData.datasetRequirements}\n
+      Purpose of Use: ${formData.purposeOfUse}
+    `;
 
-      
-      const mailtoLink = 'mailto:sudhesh777@gmail.com,sikhakrishnanunni@gmail.com?subject=Dataset Request&body=' + encodeURIComponent(emailContent);
-      window.location.href = mailtoLink;
+    const mailtoLink = 'mailto:sudhesh777@gmail.com?subject=Dataset Request&body=' + encodeURIComponent(emailContent);
+    window.location.href = mailtoLink;
 
-      alert('Request submitted successfully');
-      window.location.href = 'datasets.html';
-    });
-  </script>
+    setTimeout(function() {
+      const mailtoLink2 = 'mailto:sikhakrishnanunni@gmail.com?subject=Dataset Request&body=' + encodeURIComponent(emailContent);
+      window.location.href = mailtoLink2;
+    }, 2000); // Delay sending the second email to give time for the first
+
+    alert('Request submitted successfully. Please click the second link to send the request to the second email address.');
+    window.location.href = 'datasets.html';
+  });
+ </script>
+
 
 </body>
 
