@@ -170,13 +170,7 @@
 
     const mailtoLink = 'mailto:sudhesh777@gmail.com?subject=Dataset Request&body=' + encodeURIComponent(emailContent);
     window.location.href = mailtoLink;
-
-    setTimeout(function() {
-      const mailtoLink2 = 'mailto:sikhakrishnanunni@gmail.com?subject=Dataset Request&body=' + encodeURIComponent(emailContent);
-      window.location.href = mailtoLink2;
-    }, 2000); // Delay sending the second email to give time for the first
-
-    alert('Request submitted successfully. Please click the second link to send the request to the second email address.');
+    alert('Request submitted successfully');
     window.location.href = 'datasets.html';
   });
  </script>
