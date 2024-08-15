@@ -169,11 +169,9 @@
         Purpose of Use: ${formData.purposeOfUse}
       `;
 
-      const mailtoLink = 'mailto:sudhesh777@gmail.com?subject=Dataset Request&body=' + encodeURIComponent(emailContent);
+      
+      const mailtoLink = 'mailto:sudhesh777@gmail.com,sikhakrishnanunni@gmail.com?subject=Dataset Request&body=' + encodeURIComponent(emailContent);
       window.location.href = mailtoLink;
-
-      const mailtoLink2 = 'mailto:sikhakrishnanunni@gmail.com?subject=Dataset Request&body=' + encodeURIComponent(emailContent);
-      window.location.href = mailtoLink2;
 
       alert('Request submitted successfully');
       window.location.href = 'datasets.html';
